@@ -1,0 +1,16 @@
+//px and rem
+=par($sizeValue: 16)
+  font-size: $sizeValue + px
+  font-size: $sizeValue / 16 + rem
+
+//em
+@function em($size, $context: 16)
+  @return ($size/$context) * 1em
+
+//rem
+@function rem($size, $context: 16)
+  @return ($size/$context) + rem
+
+//line-height
+@function lh($lh, $fz)
+  @return ($lh/$fz)

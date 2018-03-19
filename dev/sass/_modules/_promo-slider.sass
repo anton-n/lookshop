@@ -1,0 +1,126 @@
+.promo-slider-section
+	background: linear-gradient(90deg, rgb(246, 243, 236), rgb(233, 224, 215))
+	position: relative
+	margin-bottom: 74px
+	&:after
+		position: absolute
+		content: ''
+		left: 0
+		bottom: 0
+		width: 57%
+		height: 7px
+		background: rgba(#000, .2)
+	.container
+		+r(1000)
+			padding: 0
+
+
+
+.promo-slider
+	&__item
+		height: 440px
+		.container
+			background: url('../img/slider-bg3.png') 100% 50% no-repeat
+			height: 100%
+	&__inner
+		padding-top: 40px
+		padding-left: 50px
+		width: 350px
+	&__img
+		margin-bottom: 20px
+	&__btn
+		display: inline-block
+		height: 54px
+		line-height: 57px
+		padding: 0 48px 0 22px
+		color: #fff
+		background-color: #fd926d
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		font-weight: 300
+		box-shadow: 0 3px 0 0 #dd6b44
+		position: relative
+		transition: .5s ease
+		&:after
+			position: absolute
+			content: ''
+			right: 22px
+			top: 50%
+			margin-top: -2.5px
+			transform: rotate(90deg)
+			display: block
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 5px 5px
+			border-color: transparent transparent #fff
+		&:hover
+			background-color: $accent
+			box-shadow: 0 3px 0 0 #fd926d
+.btn-inner
+	text-align: center
+
+/* Slider SASS */
+
+.slider-nav
+	background-color: #000
+	position: relative
+
+.slick-dots
+	position: absolute
+	left: 50%
+	top: 32px
+	transform: translateX(-50%)
+	text-align: center
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-right: 18px
+		&.slick-active,&:hover
+			button
+				background-color: #fd926d
+		&:last-child
+			margin-right: 0
+		button
+			font-size: 0
+			display: block
+			background-color: #867a76
+			width: 14px
+			height: 14px
+			border-radius: 50%
+			border: none
+			outline: none
+			cursor: pointer
+			transition: .5s ease
+
+.slider-arrow
+	position: absolute
+	top: 50%
+	width: 30px
+	height: 118px
+	margin-top: -59px
+	display: block
+	background-color: #fefefd
+	border: none
+	outline: none
+	transition: .75s ease
+	opacity: .75
+	cursor: pointer
+	&:hover
+		box-shadow: 0 0 5px 1px #aaa
+		opacity: .9
+	&:before
+		position: absolute
+		content: ''
+		+sprite($s-slider-arrow)
+		top: 50
+		left: 50%
+		transform: translate(-50%, -50%)
+	&.slider-arrows__prev
+		left: 0
+
+	&.slider-arrows__next
+		right: 0
+		&:before
+			transform: translate(-50%, -50%) rotate(-180deg)

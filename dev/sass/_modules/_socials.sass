@@ -1,0 +1,508 @@
+.socials
+	// background-color: #ededed
+	&-wrap
+		margin-bottom: 40px
+		background-color: #ededed
+	.container
+		height: 55px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.mail-form
+	display: flex
+	align-items: center
+	&__label
+		font-size: 12px
+		color: #9f9f9f
+		margin-right: 10px
+	&__email
+		font-size: 12px
+		color: #000
+		font-style: italic
+		font-family: Arial, sans-serif
+		height: 28px
+		background-color: #fff
+		padding: 10px
+		border: none
+		width: 130px
+		&:focus
+			border: none
+			outline: none
+			// box-shadow: 0 0 1px #ccc
+		+placeholder
+			font-family: Arial, sans-serif
+			font-style: italic
+			font-size: 12px
+			color: #9f9f9f
+	&__button
+		width: 28px
+		height: 28px
+		background-color: #fd926d
+		line-height: 28px
+		border: none
+		outline: none
+		font-size: 12px
+		color: #fff
+		font-family: Arial, sans-serif
+		cursor: pointer
+		box-shadow: inset 0 -3px 0 #dd6b44
+
+.links
+	display: flex
+	align-items: center
+	&__text
+		color: #6c6c6c
+		font-size: 12px
+		margin-right: 15px
+	&__list
+		display: flex
+	&__item
+		background: #f7f7f7
+		transition: .5s ease
+		&:nth-child(even)
+			background: #ededed
+			&:hover
+				// background: #ddd
+		&:hover
+			background: #ddd
+	&__link
+		display: block
+		width: 55px
+		height: 55px
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+		&.fb:before
+			+sprite($s-fb)
+		&.tw:before
+			+sprite($s-tw)
+		&.pr:before
+			+sprite($s-pr)
+
+.socials__images
+	margin-bottom: 50px
+	.container
+		display: flex
+		height: 100%
+
+.best-wrap
+	width: 50%
+	padding-right: 2px
+	&:last-child
+		padding-right: 0
+	&_vertical
+		display: flex
+		flex-direction: column
+
+.best
+	width: 100%
+	height: 340px
+	// background-image: url("../img/hh1.jpg")
+	background-position: 0 0
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	&-i
+		display: flex
+	&-inner
+		position: absolute
+		right: 44px
+		top: 15%
+		width: 210px
+		text-align: center
+		color: #414141
+		strong
+			font-size: 34px
+			text-transform: uppercase
+		span
+			font-size: 74px
+			// text-transform: uppercase
+			&:last-child
+				font-weight: 900
+				color: #4fafa0
+		div
+			background-color: #414141
+			color: #fff
+			width: 33px
+			height: 33px
+			margin: 0 auto
+			line-height: 33px
+			border-radius: 50%
+			position: relative
+			&:before
+				position: absolute
+				top: 50%
+				right: 100%
+				width: 87px
+				height: 1px
+				margin-right: 3px
+				background-color: #414141
+				content: ''
+			&:after
+				position: absolute
+				top: 50%
+				left: 100%
+				width: 87px
+				height: 1px
+				margin-left: 3px
+				background-color: #414141
+				content: ''
+
+
+.best-item
+	height: 170px
+	width: 50%
+	background-image: url(../img/hh2.jpg)
+	background-position: 50% 50%
+	background-size: cover
+	margin-right: 2px
+	position: relative
+	&:last-child
+		margin-right: 0
+	&_w
+		height: 168px
+		width: 100%
+		margin-bottom: 2px
+	span
+		position: absolute
+		width: 100%
+		text-align: center
+		bottom: 15px
+		// left: 50%
+		// transform: translateX(-50%)
+		font-size: 30px
+		text-transform: uppercase
+		color: #fff
+		text-shadow: 0 2px 0 rgba(0, 0, 0, 0.19)
+
+.slider__item
+	max-width: 220px
+	text-align: center
+	background-color: #f7f7f7
+	margin-top: 10px
+	// margin: 30px 0
+	// box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35)
+
+.slider__image
+	height: 300px
+	width: 220px
+	background-size: cover
+	margin-bottom: 12px
+
+.slider__content
+	background-color: #f7f7f7
+
+.slider__product-name
+	font-size: 12px
+	font-weight: 400
+	color: #373737
+	text-transform: uppercase
+	margin-bottom: 12px
+
+.product__price
+	font-weight: 22px
+	color: #373737
+	margin-bottom: 12px
+
+.slider__btn
+	height: 34px
+	line-height: 38px
+	max-width: 120px
+	color: #fff
+	cursor: pointer
+	padding: 0 10px
+	font-size: 12px
+	margin-bottom: 12px
+	position: static
+	&::after
+		display: none
+
+.main-slider
+	padding-top: 50px
+.nav
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	&__filter
+		padding: 20px
+		font-size: 15px
+		color: #555
+		cursor: pointer
+		text-transform: uppercase
+		transition: .5s ease
+		&:hover
+			background: rgba(#fd926d, .5)
+		&.active
+			background-color: #fd926d
+			color: #fff
+
+.slider
+	height: 456px
+	background-color: #fd926d
+
+.slider__inner
+	opacity: 0
+	visibility: hidden
+	display: none
+
+.slick-center
+	transition: 1.5s ease
+	transform: scale(1.04)
+	.slider__item
+		box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35)
+		position: relative
+		.slider__inner
+			position: absolute
+			left: 50%
+			top: 20%
+			transform: translateX(-50%)
+			display: block
+			width: 130px
+			height: 130px
+			background-color: #3d3d3d
+			border-radius: 50%
+			text-transform: uppercase
+			color: #fff
+			text-decoration: none
+			line-height: 158px
+			background-image: url(../img/inner.png)
+			background-repeat: no-repeat
+			background-position: 50% 35%
+			transition: opacity .7s ease
+			opacity: 0
+			visibility: hidden
+		&:hover
+			.slider__inner
+				opacity: 1
+				visibility: visible
+				display: block
+
+.slider__wrapper
+	width: calc(100% + 30px) //we need more width for the shadows on the edges
+	padding: 15px //space for the shadows
+	margin-left: -15px //put the div in its original position
+	overflow: hidden //hide the overflow
+
+.main-slider > .container
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+
+.slick-arrows
+	display: flex
+
+.arrow-lt,
+.arrow-gt
+	width: 45px
+	height: 45px
+	background: rgba(#fd926d, .5)
+	transition: .5s ease
+	cursor: pointer
+	font-size: 30px
+	line-height: 47px
+	text-align: center
+	font-weight: 400
+	color: #999
+	&:hover
+		background: #fd926d
+		color: #fff
+
+
+
+.clearence
+	padding: 20px 0
+	text-align: center
+	& > .container
+		overflow: hidden
+	&__img
+		display: inline-block
+		text-align: center
+	&__link
+		display: inline-block
+		position: relative
+		text-align: center
+		&:before,&:after
+			position: absolute
+			top: 50%
+			width: 1000px
+			height: 1px
+			background-color: #d8d8d8
+			content: ''
+		&:after
+			left: 100%
+			margin-left: 20px
+		&:before
+			right: 100%
+			margin-right: 20px
+
+.promo
+	margin-bottom: 60px
+
+.promo > .container
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+
+.brands
+	padding: 20px 0
+	position: relative
+	border: 1px solid #d8d8d8
+	// margin-bottom: 30px
+	&__title
+		position: absolute
+		display: block
+		padding: 0 20px
+		top: -8px
+		z-index: 10
+		left: 50%
+		transform: translateX(-50%)
+		text-transform: uppercase
+		color: #414141
+		font-size: 15px
+		font-weight: 700
+		background-color: #fff
+
+.bradns-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.about
+	text-align: center
+	padding: 30px 0
+	&__title
+		font-weight: 400
+		font-size: 24px
+		color: #414141
+		margin-bottom: 15px
+	&__text
+		font-size: 14px
+		line-height: 1.3
+		color: #999
+
+.payment
+	padding: 20px 0
+	background-color: #f7f7f7
+	> .container
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		a
+			margin-right: 15px
+	&__text
+		color: #ababab
+		font-size: 12px
+		margin-right: 15px
+	&-img
+		// margin-right: 10px
+
+.links-blocks
+	padding: 32px 0
+	background-color: #ededed
+	> .container
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+.links-block
+	&_100
+		// align-self: center
+		margin-top: 20px
+	&__title
+		color: #544f4d
+		font-size: 16px
+		line-height: 1.2
+		text-transform: capitalize
+		margin-bottom: 15px
+	&__item
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__link
+		font-size: 12px
+		color: #544f4d
+		text-decoration: none
+		transition: color .2s ease
+		cursor: pointer
+		&:hover
+			color: #000
+
+.social
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	max-width: 140px
+	flex-flow: row wrap
+	&__item
+		display: block
+		width: 35px
+		height: 35px
+		line-height: 44px
+		background-color: #4c4c4b
+		border-radius: 50%
+		text-align: center
+		transition: .5s ease
+		margin-right: 10px
+		margin-bottom: 10px
+		svg
+			font-size: 20px
+			fill: #fff
+		&:hover
+			background-color: #fff
+			svg
+				fill: #4c4c4b
+
+
+
+.footer
+	padding: 24px 0
+	background-color: #000
+	color: #8d8d8d
+	font-size: 11px
+	font-weight: 400
+	> .container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.footer-menu
+	&__item
+		display: inline-block
+		position: absolute
+		padding-right: 22px
+		position: relative
+		&:last-child
+			margin-right: 10px
+			&::after
+				content: ''
+		&::after
+			position: absolute
+			top: 0
+			right: 10px
+			content: '|'
+
+.footer-menu__link
+	color: #8d8d8d
+	text-decoration: none
+	transition: .5s ease
+	&:hover
+		color: #fff
+
+.copyright
+	text-align: right
+	line-height: 1.6

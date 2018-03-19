@@ -1,0 +1,121 @@
+.main-header
+	background-color: #000
+	height: 30px
+	overflow: hidden
+	> .container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.main-header__nav
+	display: flex
+	align-items: center
+	height: 30px
+
+.phone
+	font-size: 11px
+	line-height: 17px
+	color: #fff
+	text-decoration: none
+	text-transform: uppercase
+
+.currency
+	box-sizing: border-box
+	width: 80px
+	font-size: 11px
+	// height: 30px
+	border: none
+	-webkit-appearance: none
+	background: #000
+	background: #000 url(../img/arrowDown.png) 88% 50% no-repeat
+	line-height: 30px
+	padding: 0 5px
+	/* for FF */
+	-moz-appearance: none
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none!important
+	color: #fff
+	border: 
+		left: 1px solid #444
+		right: 1px solid #444
+	cursor: pointer
+	transition: .5s linear
+
+	&:focus
+		outline: none
+	&:hover
+		color: $accent
+
+select::-ms-expand
+	display: none
+
+.account
+	display: inline-block
+	max-width: 128px
+	width: 100%
+	// height: 30px
+	// height: 100%
+	// height: auto	
+
+	&__link
+		color: #fff
+		background-color: inherit
+		width: 100%
+		padding-left: 30px
+		display: block
+		height: 30px
+		line-height: 30px
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 11px
+		color: #fff
+		position: relative
+		transition: .5s linear
+
+		&:hover
+			color: $accent
+
+		&:before
+			position: absolute
+			left: 8px
+			top: 8px
+			content: ''
+			+sprite($s-account)
+
+.search__inp
+	height: 30px
+	border: none
+	outline: none
+	font-size: 11px
+	line-height: 28px
+	width: 150px
+	padding: 0 10px
+	color: #fff
+	+placeholder
+		color: #fff
+		font-size: 11px
+	border: 
+		top: 1px solid #000
+		bottom: 1px solid #000
+		left: 1px solid #444
+		right: 1px solid #444
+	background-color: #000
+	display: none
+.search__activate
+	display: block
+	width: 30px
+	height: 30px
+	border:
+		left: 1px solid #444
+		right: 1px solid #444
+	position: relative
+
+	&:before
+		position: absolute
+		content: ''
+		+sprite($s-search)
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
